@@ -1,0 +1,135 @@
+@use "./partials/palette";
+
+* {
+	font-family: Helvetica, sans-serif;
+	font-weight: 100;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: black;
+}
+
+p {
+	margin: 0;
+}
+
+.heading {
+	color: palette.$text;
+}
+
+.calc {
+	color: palette.$text;
+	width: 100%;
+	max-width: 300px;
+
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 20px;
+	overflow: hidden;
+	background-color: palette.$display;
+
+	&__display {
+		// background-color: palette.$display;
+		text-align: right;
+		min-width: 100%;
+		max-width: inherit;
+
+		&__text {
+			margin: 1rem;
+			font-size: 3rem;
+		}
+	}
+
+	&__input {
+		font-size: 1.5rem;
+		display: grid;
+		grid-template-areas:
+			"ac pm pct dv"
+			"sev eight nine mlt"
+			"four five six minus"
+			"one two three plus"
+			"zer zer pt equ";
+		gap: 2px;
+
+		&__btn {
+			text-align: center;
+			padding: 1rem;
+
+			&--special {
+				background-color: palette.$special-btns;
+			}
+			&--ops {
+				background-color: palette.$operators;
+			}
+			&--nums {
+				background-color: palette.$buttons;
+			}
+			&--dot {
+				background-color: palette.$buttons;
+			}
+		}
+	}
+}
+
+#ac {
+	grid-area: ac;
+}
+#pm {
+	grid-area: pm;
+}
+#pct {
+	grid-area: pct;
+}
+
+#dv {
+	grid-area: dv;
+}
+#mlt {
+	grid-area: mlt;
+}
+#min {
+	grid-area: minus;
+}
+#plus {
+	grid-area: plus;
+}
+#equ {
+	grid-area: equ;
+}
+#dot {
+	grid-area: pt;
+}
+#nine {
+	grid-area: nine;
+}
+#eight {
+	grid-area: eight;
+}
+#seven {
+	grid-area: sev;
+}
+#six {
+	grid-area: six;
+}
+#five {
+	grid-area: five;
+}
+#four {
+	grid-area: four;
+}
+#three {
+	grid-area: three;
+}
+#two {
+	grid-area: two;
+}
+#one {
+	grid-area: one;
+}
+#zero {
+	grid-area: zer;
+}
