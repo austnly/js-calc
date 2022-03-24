@@ -58,6 +58,11 @@ p {
 		&__btn {
 			text-align: center;
 			padding: 1rem;
+			cursor: pointer;
+
+			&:active {
+				background-color: palette.$text;
+			}
 
 			&--special {
 				background-color: palette.$special-btns;

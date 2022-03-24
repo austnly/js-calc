@@ -46,6 +46,10 @@ p {
 .calc__input__btn {
   text-align: center;
   padding: 1rem;
+  cursor: pointer;
+}
+.calc__input__btn:active {
+  background-color: white;
 }
 .calc__input__btn--special {
   background-color: #3f3f3f;
