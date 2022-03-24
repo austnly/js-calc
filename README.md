@@ -11,9 +11,7 @@ A project to demonstrate the use of JavaScript and DOM manipulation, by recreati
 
 <img src="./img/goal.png" width="300px" alt="Goal Screenshot" />
 
-## MVP:
-
-Calculator:
+## MVP
 
 -   HTML/SCSS
 
@@ -30,3 +28,23 @@ Calculator:
 1. It should handle decimals
 1. It doesn't need to support orders of operation
 1. It should not use eval() or Function() constructor
+
+## Logic Plan
+
+1. Each button should have an EventListener to do _something_ when clicked
+1. Number Buttons
+    - Replace content of display if display 0 or previous button was an operator
+    - Concatenate to display if display is a number or a .
+1. . Button
+    - Concatenate to current displayed number or 0
+1. AC Button
+    - Reset display to 0 and clear stored values
+1. Operator Buttons
+    - Evaluate any previous operations in memory involving current displayed value and any stored values, storing the result (all operator buttons should action an "=" first)
+    - Store value currently on display if no previous operator
+    - Store the operator that has just been clicked
+    - Allow next number to be entered for current operation
+1. +/- Button
+    - Negate current displayed value and output to display
+1. % Button
+    - Divide current displayed number by 100 before evaluating any operations
