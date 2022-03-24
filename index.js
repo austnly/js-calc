@@ -1,22 +1,3 @@
-/*
-1. addEventListener for each button
-2. Number Buttons
-    - Replace content of display if display 0 or previous button was an operator
-    - Concatenate to display if display is a number or a .
-3. Operator Buttons
-    - Store value currently on display
-    - Evaluate any previous operations in memory involving current displayed value
-    - Output any evaluations to display
-4. x AC Button
-    - Reset display to 0 and clear stored values
-5. +/- Button
-    - Negate current displayed value and output to display
-6. % Button
-    - Divide current displayed number by 100 before evaluating any operations
-7. . Button
-    - Concatenate to current displayed number or 0
-*/
-
 // Variable to call the display text element
 const display = document.querySelector(".calc__display").childNodes[1];
 
@@ -54,10 +35,24 @@ numberBtns.forEach((numBtn) => {
 });
 
 const numClick = (num) => {
-	// console.log(num)
-	if (display.textContent === "0" || startNextInput === true) {
-		changeDisplay(num);
+	if (startNextInput === true) {
+		if (num === ".") {
+			changeDisplay("0.");
+		} else {
+			changeDisplay(num);
+		}
 		startNextInput = false;
+	} else if (display.textContent === "0") {
+		if (num === ".") {
+			changeDisplay("0.");
+		} else {
+			changeDisplay(num);
+		}
+	} else if (num === ".") {
+		// Prevent two decimal points
+		if (!display.textContent.includes(".")) {
+			changeDisplay(display.textContent + num);
+		}
 	} else if (display.textContent.length > 9) {
 		// replace with fn?
 		changeDisplay("TOO BIG");
@@ -73,23 +68,6 @@ const opsBtn = document.querySelectorAll(".calc__input__btn--ops");
 
 opsBtn.forEach((op) => {
 	op.addEventListener("click", () => {
-		// 1 + 2
-		// Press plus, 1 is stored, display reset when 2 is clicked
-		// numClick stores previous val
-		// plus is new operator
-		// Press equals, evaluate stored num, operator, displaynum, output to display
-
-		//prev + 3
-		// Press plus, prev is stored, display reset when 3 is clicked
-		// Need to evaluate previous ops prior to changing operator var
-		// - Store value currently on display
-
-		// - Evaluate any previous operations in memory involving current displayed value
-
-		// - Output any evaluations to display
-
-		// console.log("Current val", currentVal, "Current op", currentOp);
-
 		// evaluate the previous operation first
 		equals();
 		console.log("Prev operator: ", currentOp);
@@ -118,7 +96,7 @@ const evaluate = (stored, operator, current) => {
 	if (String(result).length > 10) {
 		result = Number(String(result).substring(0, 10)); // doesn't currently round last decimal place
 	}
-	// operator = "&equals;";
+
 	return result;
 };
 
@@ -134,3 +112,14 @@ const equals = () => {
 };
 
 // Need a case for if outputted number is too big - maybe use a function to replace condition check?
+
+const pctBtn = document.getElementById("pct");
+const pmBtn = document.getElementById("pm");
+
+pctBtn.addEventListener("click", () => {
+	changeDisplay(display.textContent / 100);
+});
+
+pmBtn.addEventListener("click", () => {
+	changeDisplay(display.textContent * -1);
+});
