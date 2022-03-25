@@ -51,7 +51,7 @@ JavaScript
 
 ## Issues to address
 
-[X] Allow decimal place input
-[X] Auto-add 0 to first place when making a new decimal number
-[X] Prevent more than one decimal point being entered
-[] Long number overflow/rounding
+- [x] Allow decimal place input
+- [x] Auto-add 0 to first place when making a new decimal number
+- [x] Prevent more than one decimal point being entered
+- [ ] Long number overflow/rounding
