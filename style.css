@@ -1,6 +1,7 @@
 * {
   font-family: Helvetica, sans-serif;
   font-weight: 100;
+  color: white;
 }
 
 body {
@@ -15,11 +16,14 @@ p {
 }
 
 .heading {
-  color: white;
+  text-align: center;
+}
+
+.foot {
+  margin: 50px;
 }
 
 .calc {
-  color: white;
   width: 100%;
   max-width: 300px;
   display: flex;
@@ -40,6 +44,7 @@ p {
 .calc__input {
   font-size: 1.5rem;
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "ac pm pct dv" "sev eight nine mlt" "four five six minus" "one two three plus" "zer zer pt equ";
   gap: 2px;
 }

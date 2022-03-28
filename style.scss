@@ -3,6 +3,7 @@
 * {
 	font-family: Helvetica, sans-serif;
 	font-weight: 100;
+	color: palette.$text;
 }
 
 body {
@@ -17,11 +18,14 @@ p {
 }
 
 .heading {
-	color: palette.$text;
+	text-align: center;
+}
+
+.foot {
+	margin: 50px;
 }
 
 .calc {
-	color: palette.$text;
 	width: 100%;
 	max-width: 300px;
 
@@ -47,6 +51,7 @@ p {
 	&__input {
 		font-size: 1.5rem;
 		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 		grid-template-areas:
 			"ac pm pct dv"
 			"sev eight nine mlt"
