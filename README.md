@@ -4,10 +4,15 @@
 
 A project to demonstrate the use of JavaScript and DOM manipulation, by recreating the Apple calculator app on a web page.
 
-## Goal
+## Launch
 
--   For number and operator button presses to trigger changes in the display, and output the correct values
--   For the calculator to reproduce the appearance of the following screenshot:
+The live project can be launched [here](https://austnly.github.io/js-calc/).
+
+## Goals
+
+-   To learn how to manipulate the DOM on user interaction using JavaScript EventListeners
+-   For number and operator button clicks to trigger changes in the display, perform the math operation and output the correct result on the display
+-   Use HTML/SCSS to reproduce the appearance of the following screenshot:
 
 <img src="./img/goal.png" width="300px" alt="Goal Screenshot" />
 
@@ -29,7 +34,11 @@ JavaScript
 1. It doesn't need to support orders of operation
 1. It should not use eval() or Function() constructor
 
-## Logic Plan
+## Implementation
+
+### Logic Plan
+
+Prior to coding the JavaScript, I formed a plan for the logic of the calculator to help structure my subsequent working code.
 
 1. Each button should have an EventListener to do _something_ when clicked
 1. Number Buttons
@@ -49,9 +58,23 @@ JavaScript
 1. % Button
     - Divide current displayed number by 100 before evaluating any operations
 
-## Issues to address
+### Code
+
+-   Different buttons types were grouped by class
+-   I iterated through the NodeList for the Operator and Number classes separately to apply EventListeners that would run different logic depending on if the button is an Operator or Number
+-   The operands (previously displayed and current), and operator for the current operation are stored in global variables
+-   I modularised the code, separating into generic DOM interactions (dom-utils.js), generic math functions (calc.js), and page-specific code (script.js).
+
+### Issues Addressed
+
+I encountered the following issues during implementation and implemented a fix for each case.
 
 - [x] Allow decimal place input
 - [x] Auto-add 0 to first place when making a new decimal number
 - [x] Prevent more than one decimal point being entered
-- [ ] Long number overflow/rounding
+- [x] Long number overflow (over 10 characters) that doesn't fit the display => implemented the toExponential() method
+
+## Future Additions
+
+- [ ] Different calculator style options
+- [ ] Additional buttons and operators for different styles
