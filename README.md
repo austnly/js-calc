@@ -8,13 +8,21 @@ A project to demonstrate the use of JavaScript and DOM manipulation, by recreati
 
 The live project can be launched [here](https://austnly.github.io/js-calc/).
 
+<figure>
+<img src="./img/final.png" width="300px" alt="Live Project Screenshot" />
+<figcaption>Live Project Screenshot</figcaption>
+</figure>
+
 ## Goals
 
 -   To learn how to manipulate the DOM on user interaction using JavaScript EventListeners
 -   For number and operator button clicks to trigger changes in the display, perform the math operation and output the correct result on the display
 -   Use HTML/SCSS to reproduce the appearance of the following screenshot:
 
+<figure>
 <img src="./img/goal.png" width="300px" alt="Goal Screenshot" />
+<figcaption>Target to reproduce</figcaption>
+</figure>
 
 ## MVP
 
