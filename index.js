@@ -7,8 +7,8 @@ let currentOp = "&equals;";
 let startNextInput = false;
 
 // Change display function to interact with DOM
-const changeDisplay = (value) => {
-	display.innerText = value;
+const changeDisplay = (value, element) => {
+	display.textContent = value;
 };
 
 // AC Button Event Listener
