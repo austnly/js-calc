@@ -1,9 +1,5 @@
-import * as domUtils from "./dom-utils.js";
-import * as calc from "./calc.js";
-
-const { changeElementText } = domUtils;
-
-const { evaluate, shorten } = calc;
+import { changeElementText } from "./dom-utils.js";
+import { evaluate, shorten } from "./calc.js";
 
 // Variables to store calculation values
 let storedVal = 0;
