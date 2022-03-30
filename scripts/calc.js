@@ -25,22 +25,6 @@ export const evaluate = (stored, current, operator) => {
 			result = current;
 	}
 
-	// if (operator === "+") {
-	// 	result = Number(stored) + Number(current);
-	// } else if (operator === "−") {
-	// 	result = Number(stored) - Number(current);
-	// } else if (operator === "÷") {
-	// 	result = Number(stored) / Number(current);
-	// } else if (operator === "×") {
-	// 	result = Number(stored) * Number(current);
-	// } else {
-	// 	result = current;
-	// }
-
-	// if (String(result).length > 10) {
-	// 	result = Number(String(result).substring(0, 10));
-	// }
-
 	return shorten(result);
 };
 

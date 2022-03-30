@@ -62,11 +62,11 @@ const numClick = (num) => {
 const equals = () => {
 	// Store currently displayed value
 	const currentVal = display.textContent;
-	console.log(storedVal, currentOp, currentVal);
+	// console.log(storedVal, currentOp, currentVal);
 
 	// Evaluate the math operation using storedVal, currentVal, and current operator
 	const result = evaluate(storedVal, currentVal, currentOp);
-	console.log("=", result);
+	// console.log("=", result);
 
 	// Change the display to the new value
 	changeElementText(result, display);
@@ -74,7 +74,7 @@ const equals = () => {
 	// Store the new value and allow the next input
 	storedVal = result;
 	startNextInput = true;
-	console.log("storedVal is ", storedVal);
+	// console.log("storedVal is ", storedVal);
 };
 
 // Event Listeners
@@ -87,7 +87,7 @@ acBtn.addEventListener("click", () => {
 numberBtns.forEach((numBtn) => {
 	numBtn.addEventListener("click", () => {
 		const num = numBtn.textContent.trim();
-		console.log(num);
+		// console.log(num);
 		numClick(num);
 	});
 });
@@ -99,10 +99,10 @@ opsBtn.forEach((operator) => {
 	operator.addEventListener("click", () => {
 		// Evaluate the previous operation first
 		equals();
-		console.log("Prev operator: ", currentOp);
+		// console.log("Prev operator: ", currentOp);
 		// Register the new operation
 		currentOp = operator.textContent.trim();
-		console.log("New operator: ", currentOp);
+		// console.log("New operator: ", currentOp);
 	});
 });
 
