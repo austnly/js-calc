@@ -50,8 +50,6 @@ const numClick = (num) => {
 	} else if (display.textContent.length > 9) {
 		// If displayed number is 10+ characters
 		changeElementText("3RR0R", display);
-		// } else if (display.textContent === "TOO BIG") {
-		// 	resetDisplay();
 	} else {
 		// All other cases - concatenate new number to displayed
 		changeElementText(display.textContent + num, display);
