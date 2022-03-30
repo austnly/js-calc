@@ -8,17 +8,34 @@
 export const evaluate = (stored, current, operator) => {
 	let result;
 
-	if (operator === "+") {
-		result = Number(stored) + Number(current);
-	} else if (operator === "−") {
-		result = Number(stored) - Number(current);
-	} else if (operator === "÷") {
-		result = Number(stored) / Number(current);
-	} else if (operator === "×") {
-		result = Number(stored) * Number(current);
-	} else {
-		result = current;
+	switch(operator) {
+		case "+":
+			result = Number(stored) + Number(current);
+			break;
+		case "−":
+			result = Number(stored) - Number(current);
+			break;
+		case "÷":
+			result = Number(stored) / Number(current);
+			break;
+		case "×":
+			result = Number(stored) * Number(current);
+			break;
+		default:
+			result = current;
 	}
+
+	// if (operator === "+") {
+	// 	result = Number(stored) + Number(current);
+	// } else if (operator === "−") {
+	// 	result = Number(stored) - Number(current);
+	// } else if (operator === "÷") {
+	// 	result = Number(stored) / Number(current);
+	// } else if (operator === "×") {
+	// 	result = Number(stored) * Number(current);
+	// } else {
+	// 	result = current;
+	// }
 
 	// if (String(result).length > 10) {
 	// 	result = Number(String(result).substring(0, 10));
