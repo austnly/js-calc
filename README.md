@@ -4,13 +4,24 @@
 
 A project to demonstrate the use of JavaScript and DOM manipulation, by recreating the Apple calculator app on a web page.
 
-## Launch
+### 🚀 [Launch Live Project](https://austnly.github.io/js-calc/)
 
-The live project can be launched [here](https://austnly.github.io/js-calc/).
+## Table of Contents
+
+-   [Screenshots](#screenshots)
+-   [Goals](#goals)
+-   [Tech Stack](#tech-stack)
+-   [Implementation](#implementation)
+    -   [MVP](#mvp)
+    -   [Plan](#logic-plan)
+    -   [Issues Addressed](#issues-addressed)
+-   [Future Additions](#future-additions)
+
+## Screenshots
 
 <figure>
-<img src="./img/final.png" width="300px" alt="Live Project Screenshot" />
 <figcaption>Live Project Screenshot</figcaption>
+<img src="./img/final.png" width="300px" alt="Live Project Screenshot" />
 </figure>
 
 ## Goals
@@ -20,11 +31,20 @@ The live project can be launched [here](https://austnly.github.io/js-calc/).
 -   Use HTML/SCSS to reproduce the appearance of the following screenshot:
 
 <figure>
-<img src="./img/goal.png" width="300px" alt="Goal Screenshot" />
 <figcaption>Target to reproduce</figcaption>
+<img src="./img/goal.png" width="300px" alt="Goal Screenshot" />
 </figure>
 
-## MVP
+## Tech Stack
+
+-   HTML
+-   CSS/SCSS
+-   JavaScript
+-   Git
+
+## Implementation
+
+### MVP
 
 HTML/SCSS
 
@@ -41,8 +61,6 @@ JavaScript
 1. It should handle decimals
 1. It doesn't need to support orders of operation
 1. It should not use eval() or Function() constructor
-
-## Implementation
 
 ### Logic Plan
 
@@ -77,12 +95,12 @@ Prior to coding the JavaScript, I formed a plan for the logic of the calculator 
 
 I encountered the following issues during implementation and implemented a fix for each case.
 
-- [x] Allow decimal place input
-- [x] Auto-add 0 to first place when making a new decimal number
-- [x] Prevent more than one decimal point being entered
-- [x] Long number overflow (over 10 characters) that doesn't fit the display => implemented the toExponential() method
+-   [x] Allow decimal place input
+-   [x] Auto-add 0 to first place when making a new decimal number
+-   [x] Prevent more than one decimal point being entered
+-   [x] Long number overflow (over 10 characters) that doesn't fit the display => implemented the toExponential() method
 
 ## Future Additions
 
-- [ ] Different calculator style options
-- [ ] Additional buttons and operators for different styles
+-   [ ] Different calculator style options
+-   [ ] Additional buttons and operators for different styles
