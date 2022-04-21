@@ -15,6 +15,7 @@ A project to demonstrate the use of JavaScript and DOM manipulation, by recreati
     -   [MVP](#mvp)
     -   [Plan](#logic-plan)
     -   [Issues Addressed](#issues-addressed)
+    -   [Bugs](#bugs-to-address)
 -   [Future Additions](#future-additions)
 
 ## Screenshots
