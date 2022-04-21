@@ -100,6 +100,10 @@ I encountered the following issues during implementation and implemented a fix f
 -   [x] Prevent more than one decimal point being entered
 -   [x] Long number overflow (over 10 characters) that doesn't fit the display => implemented the toExponential() method
 
+### Bugs To Address
+
+-   [ ] Entering number after "3RR0R" message does not reset display
+
 ## Future Additions
 
 -   [ ] Different calculator style options
